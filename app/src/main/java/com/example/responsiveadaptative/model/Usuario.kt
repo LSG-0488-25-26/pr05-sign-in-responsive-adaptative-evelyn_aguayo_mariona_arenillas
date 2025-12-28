@@ -36,3 +36,14 @@ data class EstadoRegistro(
     val registroExitoso: Boolean = false
 )
 
+/**
+ * Estat del formulari de login
+ */
+data class EstadoLogin(
+    val nombreUsuario: String = "",
+    val password: String = "",
+    val errorUsuario: String = "",
+    val errorPassword: String = "",
+    val cargando: Boolean = false,
+    val loginExitoso: Boolean = false
+)
