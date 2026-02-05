@@ -1,4 +1,4 @@
-# PR07 - Responsive & Adaptive Design 🎵+
+# PR07 - Responsive & Adaptive 
 
 App Android que implementa diseño **responsive** y **adaptive** para un sistema de login y registro de usuarios.
 
