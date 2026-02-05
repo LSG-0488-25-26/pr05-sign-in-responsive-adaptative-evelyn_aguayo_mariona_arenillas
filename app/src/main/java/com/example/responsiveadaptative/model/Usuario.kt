@@ -1,8 +1,5 @@
 package com.example.responsiveadaptative.model
 
-/**
- * Data class que representa un usuari
- */
 data class Usuario(
     val nombreCompleto: String = "",
     val fechaNacimiento: String = "",
@@ -16,10 +13,7 @@ data class Usuario(
     val aceptaTerminos: Boolean = false
 )
 
-/**
- * Estat del formulari de registre
- * Conte l'usuari i els missatges d'error de cada camp
- */
+
 data class EstadoRegistro(
     val usuario: Usuario = Usuario(),
     val errorNombre: String = "",
@@ -36,9 +30,7 @@ data class EstadoRegistro(
     val registroExitoso: Boolean = false
 )
 
-/**
- * Estat del formulari de login
- */
+
 data class EstadoLogin(
     val nombreUsuario: String = "",
     val password: String = "",

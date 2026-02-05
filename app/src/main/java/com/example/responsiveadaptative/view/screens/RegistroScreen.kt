@@ -25,14 +25,7 @@ import com.example.responsiveadaptative.navegacion.Rutas
 import com.example.responsiveadaptative.ui.theme.*
 import com.example.responsiveadaptative.viewmodel.RegistroViewModel
 
-/**
- * Pantalla de Registre  *
- * - Nom complet, data naixement, email, telefon
- * - Nom usuari, password, confirmar password
- * - Instrument (DropdownMenu), Nivell (RadioButton)
- * - Acceptació de termes (Checkbox)
- * - Validacions de tots els camps
- */
+
 @Composable
 fun RegistroScreen(
     navController: NavHostController,
@@ -342,13 +335,13 @@ fun PanellInstruments() {
 
         // Llista d'instruments
         val instruments = listOf(
-            "🎸 Guitarra",
-            "🎹 Piano",
-            "🥁 Bateria",
-            "🎸 Baix",
-            "🎻 Violí",
-            "🎷 Saxofon",
-            "🎤 Cant"
+            "Guitarra",
+            "Piano",
+            "Bateria",
+            "Baix",
+            "Violí",
+            "Saxofon",
+            "Cant"
         )
 
         for (instrument in instruments) {
@@ -424,10 +417,7 @@ fun PanellContacte() {
     }
 }
 
-/**
- * Formulari de registre complet
- * Pot mostrar-se en una o dues columnes
- */
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormularioRegistroComplet(
@@ -435,14 +425,11 @@ fun FormularioRegistroComplet(
     viewModel: RegistroViewModel,
     duesColumnes: Boolean
 ) {
-    // Estats per mostrar/ocultar contrasenyes
     var mostrarPassword by remember { mutableStateOf(false) }
     var mostrarConfirmar by remember { mutableStateOf(false) }
 
-    // Estat per al dropdown d'instruments
     var expanditInstruments by remember { mutableStateOf(false) }
 
-    // Llista d'instruments
     val llistaInstruments = listOf(
         "Guitarra",
         "Piano",

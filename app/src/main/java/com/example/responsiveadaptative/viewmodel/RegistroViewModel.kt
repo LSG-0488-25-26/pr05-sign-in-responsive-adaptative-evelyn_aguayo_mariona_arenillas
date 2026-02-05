@@ -7,9 +7,7 @@ import com.example.responsiveadaptative.model.EstadoLogin
 import com.example.responsiveadaptative.model.EstadoRegistro
 import com.example.responsiveadaptative.model.Usuario
 
-/**
- * ViewModel que gestiona l'estat de l'aplicació
- */
+
 class RegistroViewModel : ViewModel() {
 
     // REGISTRE

@@ -384,7 +384,7 @@ fun LoginExpanded(
 }
 
 /**
- * Formulari de login reutilitzable
+ * Formulari de login
  * Conte els camps d'usuari i password
  */
 @Composable
@@ -393,7 +393,6 @@ fun FormularioLogin(
     viewModel: RegistroViewModel,
     navController: NavHostController
 ) {
-    // Estat per mostrar/ocultar contrasenya
     var mostrarPassword by remember { mutableStateOf(false) }
 
     // Camp d'usuari

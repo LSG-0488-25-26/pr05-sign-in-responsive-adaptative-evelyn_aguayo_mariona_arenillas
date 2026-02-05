@@ -17,14 +17,12 @@ import com.example.responsiveadaptative.viewmodel.RegistroViewModel
 
 class MainActivity : ComponentActivity() {
 
-    // Creem el ViewModel usant viewModels()
     private val viewModel: RegistroViewModel by viewModels()
 
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Habilitem el disseny edge-to-edge (pantalla completa)
         enableEdgeToEdge()
 
         setContent {
@@ -34,19 +32,12 @@ class MainActivity : ComponentActivity() {
             // - Expanded: tablet gran o desktop
             val windowSizeClass = calculateWindowSizeClass(this)
 
-            // Apliquem el theme de l'app
             ResponsiveAdaptativeTheme {
-                // Surface és el contenidor principal
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // NAVEGACIO
                     val navController = rememberNavController()
-
-                    // - navController: per navegar entre pantalles
-                    // - viewModel: el ViewModel compartit
-                    // - windowWidthSize: la mida de pantalla
                     Navegacion(
                         navController = navController,
                         viewModel = viewModel,
